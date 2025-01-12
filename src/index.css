@@ -30,8 +30,14 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 30px;
-    color: '#ff6a95';
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+header a {
+	color: #ff6a95;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .card {
@@ -190,8 +196,9 @@ input:focus {
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 .about-link {
-	display: flex;
-	justify-content: flex-end;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
