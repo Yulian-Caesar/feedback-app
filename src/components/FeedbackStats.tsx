@@ -1,7 +1,10 @@
-import { FeedbackItemProps } from "./FeedbackItem"
+import { useContext } from "react";
+import FeedbackContext, { FeedbacksContextType } from "../context/FeedbackContext";
 
-const FeedbackStats = ({ feedbacks }: { feedbacks: FeedbackItemProps[] }) => {
-	const averateRating = feedbacks.reduce((acc, cur) => {
+const FeedbackStats = () => {
+	const { feedbacks } = useContext(FeedbackContext) as FeedbacksContextType;
+
+	const averateRating = feedbacks.reduce((acc: number, cur ) => {
 		return acc + cur.rating
 	}, 0) / feedbacks.length;
 
