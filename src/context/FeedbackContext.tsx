@@ -31,7 +31,6 @@ export const FeedbackProvider = ({ children }: {children: ReactNode}) => {
 	})
 
 	useEffect(() => {
-		console.log('ss')
 		fetchFeedbacks()
 	}, [])
 
